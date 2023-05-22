@@ -16,7 +16,7 @@ import states.States;
 
 public class Controller extends JFrame implements Runnable{
     // public static final int WIDTH = 100, HEIGHT = 100;
-    public static final int WIDTH = 300, HEIGHT = 600;
+    public static final int WIDTH = 300, HEIGHT = 80;
     private Canvas canvas;
     private Thread thread;
     private Boolean running = false;
