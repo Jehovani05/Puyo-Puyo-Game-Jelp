@@ -59,11 +59,11 @@ public class Stacks{
                     if(componentA.colisionA)
                         componentB.colisionA = true;
                 }
-                // if(Ax > 0 && stack[Ax-1][Ay] > 0){
-                //     componentA.colisionA = true;
-                //     if(componentA.colisionA)
-                //         componentB.colisionA = true;
-                // }
+                if(Ax > 0 && stack[Ax-1][Ay] > 0){
+                    componentA.colisionA = true;
+                    if(componentA.colisionA)
+                        componentB.colisionA = true;
+                }
             }
             if(Ax>Bx){
                 if(Ax == 6){
@@ -71,29 +71,28 @@ public class Stacks{
                     if(componentA.colisionB)
                         componentB.colisionB = true;
                 }
-
-                // if(Ax < 6 && stack[Ax+1][Ay] > 0){
-                //     componentA.colisionA = true;
-                //     if(componentA.colisionA)
-                //         componentB.colisionA = true;
-                // }
+                if(Ax < 6 && stack[Ax+1][Ay] > 0){
+                    componentA.colisionA = true;
+                    if(componentA.colisionA)
+                        componentB.colisionA = true;
+                }
             }
 
             if(Ay == 12 && stack[Ax][Ay] == 0){
                 stack[Ax][Ay] = componentA.color + 1;
                 triggerA = true;
-                // componentA.colisionA = true;
-                // componentA.colisionB = true;
-                // componentB.colisionA = true;
-                // componentB.colisionB = true;
+                componentA.colisionA = true;
+                componentA.colisionB = true;
+                componentB.colisionA = true;
+                componentB.colisionB = true;
             }
             if(stack[Ax][Ay] == 0 && stack[Ax][Ay+1] > 0 ){
                 stack[Ax][Ay] = componentA.color + 1;
                 triggerA = true;
-                // componentA.colisionA = true;
-                // componentA.colisionB = true;
-                // componentB.colisionA = true;
-                // componentB.colisionB = true;
+                componentA.colisionA = true;
+                componentA.colisionB = true;
+                componentB.colisionA = true;
+                componentB.colisionB = true;
             }
         }
         if(By <= 12){
@@ -103,11 +102,11 @@ public class Stacks{
                     if(componentA.colisionB)
                         componentB.colisionB = true;
                 }
-                // if(Bx < 6 && stack[Ax+1][Ay] > 0){
-                //     componentA.colisionB = true;
-                //     if(componentA.colisionB)
-                //         componentB.colisionB = true;
-                // }
+                if(Bx < 6 && stack[Bx+1][By] > 0){
+                    componentB.colisionB = true;
+                    if(componentB.colisionB)
+                        componentA.colisionB = true;
+                }
             }
             if(Ax>Bx){
                 if(Bx == 0){
@@ -115,28 +114,28 @@ public class Stacks{
                     if(componentB.colisionA)
                         componentA.colisionA = true;
                 }
-                // if(Bx > 0 && stack[Ax-1][Ay] > 0){
-                //     componentA.colisionA = true;
-                //     if(componentA.colisionA)
-                //         componentB.colisionA = true;
-                // }
+                if(Bx > 0 && stack[Bx-1][Ay] > 0){
+                    componentA.colisionA = true;
+                    if(componentA.colisionA)
+                        componentB.colisionA = true;
+                }
             }
 
             if(By == 12 && stack[Bx][By] == 0){
                 stack[Bx][By] = componentB.color + 1;
                 triggerB = true;
-                // componentA.colisionA = true;
-                // componentA.colisionB = true;
-                // componentB.colisionA = true;
-                // componentB.colisionB = true;
+                componentA.colisionA = true;
+                componentA.colisionB = true;
+                componentB.colisionA = true;
+                componentB.colisionB = true;
             }
             if(stack[Bx][By] == 0 && stack[Bx][By+1] > 0 ){
                 stack[Bx][By] = componentB.color + 1;
                 triggerB = true;
-                // componentA.colisionA = true;
-                // componentA.colisionB = true;
-                // componentB.colisionA = true;
-                // componentB.colisionB = true;
+                componentA.colisionA = true;
+                componentA.colisionB = true;
+                componentB.colisionA = true;
+                componentB.colisionB = true;
             }
         }
 
@@ -150,11 +149,6 @@ public class Stacks{
             componentB.texture = assets.typeFig(colorChangeB);
             componentB.color = colorChangeB;
 
-            componentA.colisionA = false;
-            componentA.colisionB = false;
-            componentB.colisionA = false;
-            componentB.colisionB = false;
-
             componentA.position.setX(80);
             componentA.position.setY(0);
             componentB.position.setX(120);
@@ -162,6 +156,10 @@ public class Stacks{
 
             triggerA = false;
             triggerB = false;
+            componentA.colisionA = false;
+            componentA.colisionB = false;
+            componentB.colisionA = false;
+            componentB.colisionB = false;
         }
     }
 

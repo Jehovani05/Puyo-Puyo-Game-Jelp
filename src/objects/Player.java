@@ -49,6 +49,7 @@ public class Player extends MovingObject{
             turnId = 0;
             this.turnId = 0;
         }
+        
         millis++;
         if(millis == 10){
             if(position.getY() <= 480){
