@@ -1,18 +1,19 @@
-## Getting Started
+-----------------------------------[ Datos]------------------------------------
+Game-Puyo-Puyo on Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Autor: Milton Ramos
 
-## Folder Structure
+email: jyehovani@gmail.com
 
-The workspace contains two folders by default, where:
+-----------------------------------[ Reglas ]------------------------------------
+* Las esferas bajan de la parte superior del tablero de juego en pares. Un jugador puede rotarlos n su camino hacia abajo.
+* Las esferas vienen en 4 colores diferentes: rojo, azul, verde y amarillo.
+* Cuando cuatro o más esferas estén conectadas en un grupo, horizontalmente, verticalmente o en forma de tetris, no incluso en diagonal (deben estar adyacentes entre sí, ya sea horizontal o verticalmente) se eliminan del tablero de juego.
+* Todas las esferas por encima de las que están a punto de ser eliminadas caerán hasta que aterricen en otras piezas o en la parte inferior de la pantalla.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+-----------------------------------[ Controles ]------------------------------------
+* Abajo - Tecla Down
+* Izquierda - Tecla Left
+* Derecha - Tecla Right
+* Rotar - Tecla Space
