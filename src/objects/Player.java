@@ -52,7 +52,7 @@ public class Player extends MovingObject{
         millis++;
         if(millis == 10){
             if(position.getY() <= 480){
-                // position.setY(position.getY()+40);
+                position.setY(position.getY()+40);
             }
             TIMELAPSE++;
             millis = 0;
